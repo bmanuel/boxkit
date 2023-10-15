@@ -7,6 +7,7 @@ diffutils
 direnv
 findutils
 fish
+flavours
 fzf
 gnupg
 less
