@@ -30,11 +30,12 @@ RUN cat extra-packages | xargs yay -S --noconfirm --removemake && \
 # Become root again and do rooty things
 USER root
 
-RUN   ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \
-  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/podman && \
-  ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree && \
-  ls -fs /usr/bin/distrobox-host-exec /usr/bin/op && \
-  ln -fs /usr/bin/distrobox-host-exec /opt/1password/op-ssh-sign
+RUN   ln -fs /usr/sbin/distrobox-host-exec /usr/local/bin/flatpak && \
+  ln -fs /usr/sbin/distrobox-host-exec /usr/local/bin/podman && \
+  ln -fs /usr/sbin/distrobox-host-exec /usr/local/bin/rpm-ostree && \
+  ln -fs /usr/sbin/distrobox-host-exec /usr/bin/op && \
+  mkdir -p /opt/1password/ && \
+  ln -fs /usr/sbin/distrobox-host-exec /opt/1password/op-ssh-sign
 
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
   locale-gen && \
