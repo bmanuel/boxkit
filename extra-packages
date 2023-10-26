@@ -17,7 +17,7 @@ lsof
 mesa
 ncurses
 neovim
-node
+nodejs
 npm
 opengl-drivers
 pinentry
