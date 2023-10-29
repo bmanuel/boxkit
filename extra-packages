@@ -24,6 +24,7 @@ pinentry
 prettier
 procps-ng
 ripgrep
+rust
 shadow
 starship
 sudo
@@ -34,3 +35,4 @@ vulkan-intel
 vulkan-radeon
 wget
 wl-clipboard
+yq
